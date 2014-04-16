@@ -1,13 +1,21 @@
 Cultivate::Application.routes.draw do
   
+  
+  
 
+  resources :plants
 
   resources :users
 
+  get 'home/index'
 
-  get "home/contact"
+  match '/garden', to: 'plants#index', via: 'get'
+  match "/contact", to: 'home#contact', via: 'get'
 
-  root "home#index"
+  root 'home#index'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

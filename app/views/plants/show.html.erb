@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lifecycle:</strong>
+  <%= @plant.lifecycle %>
+</p>
+
+<p>
+  <strong>Plant type:</strong>
+  <%= @plant.plant_type %>
+</p>
+
+<p>
+  <strong>Breed:</strong>
+  <%= @plant.breed %>
+</p>
+
+<p>
+  <strong>Sun preference:</strong>
+  <%= @plant.sun_preference %>
+</p>
+
+<p>
+  <strong>Soil type:</strong>
+  <%= @plant.soil_type %>
+</p>
+
+<%= link_to 'Edit', edit_plant_path(@plant) %> |
+<%= link_to 'Back', plants_path %>
