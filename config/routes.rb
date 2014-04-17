@@ -1,13 +1,8 @@
 Cultivate::Application.routes.draw do
-  
-  
-  
 
   resources :plants
 
   resources :users
-
-  get 'home/index'
 
   match '/garden', to: 'plants#index', via: 'get'
   match "/contact", to: 'home#contact', via: 'get'

@@ -8,5 +8,6 @@ describe "Home" do
       visit '/'
       expect(page).to have_title('Cultivate.land')
     end
+    
   end
 end
