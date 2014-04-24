@@ -1,18 +1,13 @@
 <% provide 'app/helpers/home_helper.rb' %>
-<html>
-	<head>
-		<title>Cultivate.land</title>
-	</head>
-	<body>
-		<div class="hero">
 
+<div class="hero">
 
-			<div <%= greenify %>>
-				<h1>Welcome back to the land.</h1>
-			</div>
+	<div <%= greenify %>>
+		<h1>Welcome back to the land.</h1>
+	</div>
 
-				<p>Cultivate is a web app that helps people manage small farms and gardens. We help keep your animals and agriculture organized, so you can spend more time celebrating the harvest.</p>
+	<p>Cultivate is a web app that helps people manage small farms and gardens. We help keep your animals and agriculture organized, so you can spend more time celebrating the harvest.</p>
 
-		</div>
-	</body>
-</html>
+	<%= link_to "Go Green!", root_path(go_green: 1) %>
+
+</div>
