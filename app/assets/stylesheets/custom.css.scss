@@ -2,6 +2,7 @@ $bgDefault      : #4dd468;
 $bgHighlight    : #4dd468;
 $colDefault     : #ffffff;
 $colHighlight   : #f9f68f;
+$boxDark					: #369648;
 
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700);
@@ -33,6 +34,14 @@ textarea {
   margin-bottom: 10px;
 }
 
+.container {
+	margin: 0 auto;
+}
+
+.field {
+	font-family: 'Josefin Slab', Georgia, serif;
+	font-weight: 700;
+}
 
 /* navbar customizations */
 
@@ -125,7 +134,6 @@ h1 {
   font-size: 2em;
   letter-spacing: -2px;
   margin-bottom: 30px;
-  text-align: left;
 }
 
 h2 {
@@ -169,7 +177,9 @@ p {
 
 .sign-up {
 	margin: 0 auto;
-  width:400px;
-	background-color: #2E7F3E;
+	width: 30%;
+	background-color: $boxDark;
 	padding: 20px 50px 20px;
+	color: white;
 }
+

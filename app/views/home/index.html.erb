@@ -1,13 +1,18 @@
 <% provide 'app/helpers/home_helper.rb' %>
 
-<div class="hero">
+<div class="hero center jumbotron">
 
 	<div <%= greenify %>>
 		<h1>Welcome back to the land.</h1>
 	</div>
 
-	<p>Cultivate is a web app that helps people manage small farms and gardens. We help keep your animals and agriculture organized, so you can spend more time celebrating the harvest.</p>
+	<p>Cultivate is a web app that helps people manage small farms and gardens. </p>
+	<p>We help keep your animals and agriculture organized, so you can spend more time celebrating the harvest.</p><br />
 
-	<%= link_to "Go Green!", root_path(go_green: 1) %>
+	<div class="center">
+		<%= link_to "Sign up", sign_up_path, class: "btn btn-lg btn-warning center", role: "button" %><br /><br />
+
+		<%= link_to "Go Green!", root_path(go_green: 1) %>
+	</div>
 
 </div>
