@@ -11,7 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140424045859) do
+ActiveRecord::Schema.define(version: 20140429055121) do
+
+  create_table "farms", force: true do |t|
+    t.string   "name"
+    t.string   "start_date"
+    t.string   "location"
+    t.string   "founder"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gardens", force: true do |t|
+    t.string   "season"
+    t.integer  "year"
+    t.string   "area"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ownerships", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "plants", force: true do |t|
     t.string   "lifecycle"
