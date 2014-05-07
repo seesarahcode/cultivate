@@ -17,8 +17,6 @@ describe "users/new" do
     assert_select "form[action=?][method=?]", users_path, "post" do
       assert_select "input#user_name[name=?]", "user[name]"
       assert_select "input#user_email[name=?]", "user[email]"
-      assert_select "textarea#user_bio[name=?]", "user[bio]"
-      assert_select "input#user_location[name=?]", "user[location]"
     end
   end
 end

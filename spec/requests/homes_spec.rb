@@ -4,9 +4,9 @@ describe "Home" do
 
   describe "#index" do
 
-    it "should have the title 'Cultivate.land'" do
+    it "should have the title 'Cultivate'" do
       visit '/'
-      expect(page).to have_title('Cultivate.land')
+      expect(page).to have_title('Cultivate')
     end
     
   end
