@@ -1,9 +1,10 @@
 Cultivate::Application.routes.draw do
-
+  resources :gardens
   resources :plants
   resources :users
 
-  match '/garden', to: 'plants#index', via: 'get'
+  match '/gardens', to: 'gardens#index', via: 'get'
+  match '/plants', to: 'plants#index', via: 'get'
   match "/contact", to: 'home#contact', via: 'get'
   match 'sign_up', to: 'users#new', via: 'get'
   match '/users', to: 'users#index', via: 'get'

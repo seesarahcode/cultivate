@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @garden.season %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @garden.year %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @garden.area %>
+</p>
+
+<%= link_to 'Edit', edit_garden_path(@garden) %> |
+<%= link_to 'Back', gardens_path %>

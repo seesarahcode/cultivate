@@ -1,0 +1,31 @@
+<h1>Listing Gardens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Season</th>
+      <th>Year</th>
+      <th>Area</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gardens.each do |garden| %>
+      <tr>
+        <td><%= garden.season %></td>
+        <td><%= garden.year %></td>
+        <td><%= garden.area %></td>
+        <td><%= link_to 'Show', garden %></td>
+        <td><%= link_to 'Edit', edit_garden_path(garden) %></td>
+        <td><%= link_to 'Destroy', garden, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Garden', new_garden_path %>
