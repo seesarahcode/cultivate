@@ -1,6 +1,7 @@
 class GardensController < ApplicationController
 
    before_action :set_garden, only: [:show, :edit, :update, :destroy]
+   before_filter :authenticate_user!
 
 	def index
     @gardens = Garden.all
@@ -19,6 +20,8 @@ class GardensController < ApplicationController
   # GET /gardens/1/edit
   def edit
   end
+
+
 
   # POST /gardens
   # POST /gardens.json

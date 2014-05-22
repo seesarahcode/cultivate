@@ -7,7 +7,10 @@ group :development, :test do
 	gem 'rspec-rails', '>2.0'
 	gem 'bootstrap-sass', '2.3.2.0'
 	gem 'capybara', '2.1.0'
+	gem 'factory_girl_rails'
 end
+
+gem 'devise'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

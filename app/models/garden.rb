@@ -4,4 +4,6 @@ class Garden < ActiveRecord::Base
 	scope :small_garden, -> { where 'number_of_plants < 10' }
 	scope :window_garden, -> { where('number_of_plants < 5') }
 
+	validates :season, :year, :presence => true
+
 end

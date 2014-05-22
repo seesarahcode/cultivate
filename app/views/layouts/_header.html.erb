@@ -11,7 +11,7 @@
 		   				
 		   				<ul class="dropdown-menu">
 				        
-				        <li><a href="#">My Gardens</a></li>
+				        <li><a href="<%= gardens_path %>">My Gardens</a></li>
 				        <li><a href="#">My Plants</a></li>
 				        <li><a href="#">My Seedlings</a></li>
 				        <li><a href="#">Seed Bank</a></li>
@@ -39,7 +39,7 @@
 
 						</div>
 					</li>
-					<li>
+					<li>	
 						<div class="dropdown">
 	   				 
 	   				 <a data-target="#" href="#" data-toggle="dropdown" class="dropdown-toggle">Porch<b class="caret"></b></a>
@@ -56,9 +56,30 @@
 					</li>
 
 					<li>
+
+				<% if user_signed_in? %>	
+
+				<div class="dropdown">
+	   				 
+	   				 <a data-target="#" href="#" data-toggle="dropdown" class="dropdown-toggle">My Account <b class="caret"></b></a>
+		   				
+		   				<ul class="dropdown-menu">
+				        
+				        <li><a href="#">Profile</a></li>
+				        <li><a href="#">Reminders</a></li>
+				        <li><a href="#">My Farms</a></li>
+				        <li><a href="#">Messages</a></li>				        
+				        <li class="divider"></li>
+						    <li><a href="#">Help</a></li>
+						  </ul>   
+
+				</div>
+
+				<li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+					<% else %>
 						<div class="dropdown">
 	   				 
-	   				 <a data-target="#" href="#" data-toggle="dropdown" class="dropdown-toggle">Log in <b class="caret"></b></a>
+	   				<%= link_to 'Log in <b class="caret"></b>'.html_safe, root_path, :id => 'setupdrop', :'data-toggle' => 'dropdown', :class => 'dropdown-toggle' %>
 		   				
 		   				<ul class="dropdown-menu">
 				        
@@ -66,11 +87,13 @@
 				        <li><a href="#">Password</a></li>
 				        
 				        <li class="divider"></li>
-						    <li><%= link_to "Sign up", sign_up_path %></li>
+						    <li><%= link_to "Sign up", new_user_registration_path %></li>
 						    <li><a href="#">Help</a></li>
 						  </ul>   
 
 						</div>
+					<% end %>
+
 					</li>
 				</ul>
 			</nav>

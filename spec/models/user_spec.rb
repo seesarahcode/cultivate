@@ -1,19 +1,34 @@
 require 'spec_helper'
 
 describe User do
+  it "has a valid factory" do
+		FactoryGirl.create(:user).should be_valid
+	end
 
-	context "when signing up" do
+	describe "signing up" do
+		context "with invalid information" do
+			it "is invalid without an email address" do 
+				FactoryGirl.build(:user, email: nil).should_not be_valid
+			end
 
-		describe "with valid information" do
-			subject { User.new(name: "Sarah", email: "test@example.com") }
-			it { should be_valid }
+			it "is invalid without a password" do 
+				FactoryGirl.build(:user, password: nil).should_not be_valid
+			end
+
+			it "does not accept a password less than 6 characters long" do
+				FactoryGirl.build(:user, password: "12345").should_not be_valid
+			end
+
+			it "does not accept a password over 16 characters long" do
+				FactoryGirl.build(:user, password: "123456789123456789").should_not be_valid
+			end
 		end
-
-		describe "with invalid information" do
-			subject { User.new(name: " ", email: " ") }
-			it { should be_invalid }
+		
+		context "with valid information" do
+			it "is valid with a unique email address" do
+				FactoryGirl.create(:user).should be_valid
+			end
 		end
-
 	end
 
 end
