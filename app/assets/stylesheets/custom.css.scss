@@ -44,6 +44,10 @@ textarea {
 	font-weight: 700;
 }
 
+th {
+	padding: 20px;
+}
+
 /* navbar customizations */
 
 .nav .pull-right {
@@ -64,7 +68,6 @@ textarea {
 	font-size: 1.25em;
 	text-shadow: none;
 	color: #fff;
-
 }
 
 .navbar-default .navbar-brand {
@@ -81,6 +84,7 @@ textarea {
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
 	color: #f9f68f;
+	background-color: $bgDefault;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
 	color: #f9f68f;

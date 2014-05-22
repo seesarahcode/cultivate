@@ -1,0 +1,10 @@
+class UserMailer < ActionMailer::Base
+  default from: "welcome@cultivate.land"
+
+  def welcome_email(user)
+  	@user = user
+  	@url = 'http://cultivate.land/users/sign_in'
+  	mail(to: @user.email, subject: 'Welcome to Cultivate.land!')
+  end
+
+end

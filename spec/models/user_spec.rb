@@ -22,6 +22,10 @@ describe User do
 			it "does not accept a password over 16 characters long" do
 				FactoryGirl.build(:user, password: "123456789123456789").should_not be_valid
 			end
+
+			it "sends an email" do
+				expect { user.welcome_email }.to change { ActionMailer::Base.deliveries.count }.by(1)
+			end
 		end
 		
 		context "with valid information" do
