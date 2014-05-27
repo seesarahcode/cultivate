@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "welcome@cultivate.land"
+  default from: "welcome@cultivate.heroku.com"
 
   def welcome_email(user)
   	@user = user

@@ -27,5 +27,15 @@ Cultivate::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :user_name => '206719045a238b521',
+    :password => 'b8607a4d2191e1',
+    :address => 'mailtrap.io',
+    :domain => 'mailtrap.io',
+    :port => '2525',
+    :authentication => :cram_md5,
+    :enable_starttls_auto => true
+  }
+
 end
