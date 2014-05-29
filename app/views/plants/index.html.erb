@@ -1,4 +1,4 @@
-<h1>Listing plants</h1>
+<h1>Plants</h1>
 
 <table>
   <thead>
@@ -22,9 +22,9 @@
         <td><%= plant.breed %></td>
         <td><%= plant.sun_preference %></td>
         <td><%= plant.soil_type %></td>
-        <td><%= link_to 'Show', plant %></td>
-        <td><%= link_to 'Edit', edit_plant_path(plant) %></td>
-        <td><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', garden_plant_path(@garden, plant) %></td>
+        <td><%= link_to 'Edit', edit_garden_plant_path(@garden, plant) %></td>
+        <td><%= link_to 'Destroy', [@garden, plant], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Plant', new_plant_path %>
+<%= link_to 'New Plant', { :action => 'new', :garden_id => @garden.id } %>

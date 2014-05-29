@@ -21,7 +21,9 @@ class GardensController < ApplicationController
   def edit
   end
 
-
+  def name
+    "#{@garden.season} #{@garden.year}"
+  end
 
   # POST /gardens
   # POST /gardens.json
