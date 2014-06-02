@@ -4,6 +4,7 @@ class PlantsController < ApplicationController
 
   before_action :find_garden
 
+  layout 'plant'
 
   # GET /plants
   # GET /plants.json
@@ -79,7 +80,8 @@ class PlantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plant_params
-      params.require(:plant).permit(:lifecycle, :plant_type, :breed, :sun_preference, :soil_type, :garden_id, :id)
+      params.require(:plant).permit(:type, :variety, :seed_source, 
+                                    :plant_date, :plant_quantity, :notes, :garden_id, :id)
     end
 
     def find_garden

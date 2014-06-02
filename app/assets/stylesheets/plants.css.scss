@@ -1,3 +1,29 @@
 // Place all the styles related to the Plants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$bgDefault      : #4dd468;
+$bgHighlight    : #45BE5D;
+$colDefault     : #ffffff;
+$colHighlight   : #f9f68f;
+$boxDark				: #369648;
+
+
+/* PLANTS */
+.plants-wrapper {
+	width: 70%;
+	margin: 0 auto;
+	padding: 30px;
+	background-color: cornsilk;
+}
+
+plant>a {
+	color: $boxDark;
+}
+
+	/* Plant Forms */
+		#plant_notes {
+			height:120px;
+		}
+
+

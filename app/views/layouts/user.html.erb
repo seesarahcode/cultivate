@@ -2,7 +2,7 @@
 <html>
 	<head>
 	  <title>Cultivate</title>
-	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  <%= stylesheet_link_tag    "users", media: "all", "data-turbolinks-track" => true %>
 	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 	  <%= csrf_meta_tags %>
 	  <!--[if lt IE 9]>
@@ -11,8 +11,8 @@
 
 	</head>
 	<body>
-		<div class="container">
 		<%= render 'layouts/header' %>
+		<div class="signin-wrapper">
 		<% if notice %>
 		  <p class="alert alert-success"><%= notice %></p>
 		<% end %>
@@ -21,8 +21,6 @@
 		<% end %>
 			<%= yield %>
 		</div>
-
-<%= render 'layouts/footer' %>
-
+		<%# render 'layouts/footer' %>
 	</body>
 </html>

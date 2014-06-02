@@ -3,6 +3,8 @@ class GardensController < ApplicationController
    before_action :set_garden, only: [:show, :edit, :update, :destroy]
    before_filter :authenticate_user!
 
+   layout 'garden'
+
 	def index
     @gardens = Garden.all
   end
