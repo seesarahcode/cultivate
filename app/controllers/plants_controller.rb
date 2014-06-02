@@ -34,7 +34,7 @@ class PlantsController < ApplicationController
 
     respond_to do |format|
       if @plant.save
-        format.html { redirect_to [@garden, @plant], notice: 'Plant was successfully created.' }
+        format.html { redirect_to garden_plants_path(@garden), notice: 'Plant was successfully created.' }
         format.json { render action: 'show', status: :created, location: @plant }
       else
         format.html { render action: 'new' }
@@ -79,7 +79,7 @@ class PlantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plant_params
-      params.require(:plant).permit(:lifecycle, :plant_type, :breed, :sun_preference, :soil_type, :garden_id)
+      params.require(:plant).permit(:lifecycle, :plant_type, :breed, :sun_preference, :soil_type, :garden_id, :id)
     end
 
     def find_garden

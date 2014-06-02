@@ -1,35 +1,44 @@
 require "spec_helper"
 
 describe PlantsController do
+  before :each do 
+    @garden = FactoryGirl.create(:garden)
+    @plant = FactoryGirl.create(:plant)
+  end
+
   describe "routing" do
 
     it "routes to #index" do
-      get("/plants").should route_to("plants#index")
+      get("/plants").should route_to(:controller => "gardens", :action => "index")
     end
 
     it "routes to #new" do
-      get("/plants/new").should route_to("plants#new")
+      path = new_garden_plant_path(@garden.id)
+      { :get => path }.should route_to(
+        :controller => 'plants',
+        :action => 'new',
+        :garden_id => '1'
+      )
     end
 
     it "routes to #show" do
-      get("/plants/1").should route_to("plants#show", :id => "1")
+      path = garden_plant_path(@garden, @plant)
+      { :get => path }.should route_to(
+        :controller => 'plants',
+        :action => 'show',
+        :garden_id => '1', 
+        :id => '1'
+      )
     end
 
     it "routes to #edit" do
-      get("/plants/1/edit").should route_to("plants#edit", :id => "1")
+      path = edit_garden_plant_path(@garden, @plant)
+      { :get => path }.should route_to(
+        :controller => 'plants',
+        :action => 'edit',
+        :garden_id => '1', 
+        :id => '1'
+      )
     end
-
-    it "routes to #create" do
-      post("/plants").should route_to("plants#create")
-    end
-
-    it "routes to #update" do
-      put("/plants/1").should route_to("plants#update", :id => "1")
-    end
-
-    it "routes to #destroy" do
-      delete("/plants/1").should route_to("plants#destroy", :id => "1")
-    end
-
   end
 end

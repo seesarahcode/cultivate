@@ -3,5 +3,6 @@ FactoryGirl.define do
 	  g.season	          "Spring"
  	 	g.year            	2014
  		g.area							"Kitchen garden"
+ 		g.id								"1"
 	end 
 end

@@ -10,14 +10,4 @@ describe "plants/show" do
       :soil_type => "Soil Type"
     ))
   end
-
-  it "renders attributes in <p>" do
-    render
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/Lifecycle/)
-    rendered.should match(/Plant Type/)
-    rendered.should match(/Breed/)
-    rendered.should match(/Sun Preference/)
-    rendered.should match(/Soil Type/)
-  end
 end

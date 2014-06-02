@@ -9,7 +9,7 @@ Cultivate::Application.routes.draw do
   resources :users
 
   match '/gardens', to: 'gardens#index', via: 'get'
-  match '/plants', to: 'plants#index', via: 'get'
+  match '/plants', to: 'gardens#index', via: 'get'
   match '/contact', to: 'home#contact', via: 'get'
   
   root 'home#index'

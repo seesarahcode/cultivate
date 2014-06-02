@@ -14,11 +14,11 @@ describe UserMailer do
   	end
 
   	it 'renders the sender email' do
-  		expect(mail.from).to eql(['welcome@cultivate.land'])
+  		expect(mail.from).to eql(['welcome@cultivate.heroku.com'])
   	end
 
   	it 'assigns @url' do
-  		expect(mail.body.encoded).to match("http://cultivate.land/users/sign_in")
+  		expect(mail.body.encoded).to match("http://cultivate.heroku.com/users/sign_in")
   	end
   end
 end

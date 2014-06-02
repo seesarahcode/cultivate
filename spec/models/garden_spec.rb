@@ -14,7 +14,7 @@ describe Garden do
 		end
 
 		it "is invalid without a season" do
-			FactoryGirl.build(:garden,clear season: nil).should_not be_valid
+			FactoryGirl.build(:garden, season: nil).should_not be_valid
 		end
 	end
 
