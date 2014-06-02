@@ -1,28 +1,33 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Lifecycle:</strong>
-  <%= @plant.lifecycle %>
+  <strong>Type:</strong>
+  <%= @plant.type %>
 </p>
 
 <p>
-  <strong>Plant type:</strong>
-  <%= @plant.plant_type %>
+  <strong>Variety:</strong>
+  <%= @plant.variety %>
 </p>
 
 <p>
-  <strong>Breed:</strong>
-  <%= @plant.breed %>
+  <strong>Seed source:</strong>
+  <%= @plant.seed_source %>
 </p>
 
 <p>
-  <strong>Sun preference:</strong>
-  <%= @plant.sun_preference %>
+  <strong>Date Planted:</strong>
+  <%= @plant.plant_date %>
 </p>
 
 <p>
-  <strong>Soil type:</strong>
-  <%= @plant.soil_type %>
+  <strong>Quantity:</strong>
+  <%= @plant.plant_quantity %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @plant.notes %>
 </p>
 
 <%= link_to 'Edit', edit_garden_plant_path(@garden, @plant) %> |

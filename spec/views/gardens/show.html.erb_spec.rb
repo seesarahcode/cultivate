@@ -5,7 +5,7 @@ describe "gardens/show" do
     @garden = assign(:garden, stub_model(Garden,
       :season => "Summer",
       :year => "2014",
-      :area => "Patio"
+      :description => "Patio"
     ))
   end
 
@@ -14,6 +14,6 @@ describe "gardens/show" do
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Season/)
     rendered.should match(/Year/)
-    rendered.should match(/Are/)
+    rendered.should match(/Description/)
   end
 end

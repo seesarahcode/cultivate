@@ -5,7 +5,7 @@
     <tr>
       <th>Season</th>
       <th>Year</th>
-      <th>Area</th>
+      <th>Description</th>
       <th></th>
       <th></th>
       <th></th>
@@ -17,7 +17,7 @@
       <tr>
         <td><%= garden.season %></td>
         <td><%= garden.year %></td>
-        <td><%= garden.area %></td>
+        <td><%= garden.description %></td>
         <td><%= link_to 'View plants', {:controller => 'plants', :garden_id => garden.id} %></td>
         <td><%= link_to 'Show', garden %></td>
         <td><%= link_to 'Edit', edit_garden_path(garden) %></td>

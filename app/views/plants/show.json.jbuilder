@@ -1,1 +1,1 @@
-json.extract! @plant, :id, :lifecycle, :plant_type, :breed, :sun_preference, :soil_type, :created_at, :updated_at
+json.extract! @plant, :id, :type, :variety, :seed_source, :plant_date, :plant_quantity, :notes, :garden_id, :created_at, :updated_at

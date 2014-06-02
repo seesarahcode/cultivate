@@ -3,12 +3,12 @@
 <table>
   <thead>
     <tr>
-      <th>Lifecycle</th>
-      <th>Plant type</th>
-      <th>Breed</th>
-      <th>Sun preference</th>
-      <th>Soil type</th>
-      <th></th>
+      <th>Type</th>
+      <th>Variety</th>
+      <th>Seed source</th>
+      <th>Plant Date</th>
+      <th>Plant Quantity</th>
+      <th>Notes</th>
       <th></th>
       <th></th>
     </tr>
@@ -17,11 +17,12 @@
   <tbody>
     <% @plants.each do |plant| %>
       <tr>
-        <td><%= plant.lifecycle %></td>
-        <td><%= plant.plant_type %></td>
-        <td><%= plant.breed %></td>
-        <td><%= plant.sun_preference %></td>
-        <td><%= plant.soil_type %></td>
+        <td><%= plant.type %></td>
+        <td><%= plant.variety %></td>
+        <td><%= plant.seed_source %></td>
+        <td><%= plant.plant_date %></td>
+        <td><%= plant.plant_quantity %></td>
+        <td><%= plant.notes %></td>
         <td><%= link_to 'Show', garden_plant_path(@garden, plant) %></td>
         <td><%= link_to 'Edit', edit_garden_plant_path(@garden, plant) %></td>
         <td><%= link_to 'Destroy', [@garden, plant], method: :delete, data: { confirm: 'Are you sure?' } %></td>

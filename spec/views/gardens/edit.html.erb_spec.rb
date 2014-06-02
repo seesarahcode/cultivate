@@ -5,7 +5,7 @@ describe "gardens/edit" do
     @garden = assign(:garden, stub_model(Garden,
       :season => "MyString",
       :year => "MyString",
-      :area => "MyString"
+      :description => "MyString"
     ))
   end
 
@@ -16,7 +16,7 @@ describe "gardens/edit" do
     assert_select "form[action=?][method=?]", garden_path(@garden), "post" do
       assert_select "input#garden_season[name=?]", "garden[season]"
       assert_select "input#garden_year[name=?]", "garden[year]"
-      assert_select "input#garden_area[name=?]", "garden[area]"
+      assert_select "input#garden_description[name=?]", "garden[description]"
     end
   end
 end

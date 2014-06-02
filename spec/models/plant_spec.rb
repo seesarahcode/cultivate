@@ -8,12 +8,12 @@ describe Plant do
 			FactoryGirl.create(:plant).should be_valid
 		end
 
-		it "is invalid without a plant type" do
-			FactoryGirl.build(:plant, plant_type: nil).should_not be_valid 
+		it "is invalid without a type" do
+			FactoryGirl.build(:plant, type: nil).should_not be_valid 
 		end
 
-		it "is invalid without a breed" do
-			FactoryGirl.build(:plant, breed: nil).should_not be_valid
+		it "is invalid without a plant date" do
+			FactoryGirl.build(:plant, plant_date: nil).should_not be_valid
 		end
 	end
 
