@@ -19,14 +19,22 @@ describe User do
 				FactoryGirl.build(:user, password: "12345").should_not be_valid
 			end
 
-			it "does not accept a password over 16 characters long" do
-				FactoryGirl.build(:user, password: "123456789123456789").should_not be_valid
+			it "does not accept a password over 42 characters long" do
+				FactoryGirl.build(:user, password: "123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789").should_not be_valid
 			end
 		end
 		
 		context "with valid information" do
 			it "is valid with a unique email address" do
 				FactoryGirl.create(:user).should be_valid
+			end
+
+			it "is valid with a password" do 
+				FactoryGirl.build(:user).should be_valid
+			end
+
+			it "accepts a password more than 6 characters long" do
+				FactoryGirl.build(:user, password: "12345678", password_confirmation: "12345678").should be_valid
 			end
 		end
 	end

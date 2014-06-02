@@ -2,7 +2,7 @@
 
 <div class="hero center jumbotron">
 
-	<div <%= greenify %>>
+	<div <%# greenify %>>
 		<h1>Welcome back to the land.</h1>
 	</div>
 
@@ -12,7 +12,8 @@
 	<div class="center">
 		<%= link_to "Sign up", new_user_registration_path, class: "btn btn-lg btn-warning center", role: "button" %><br /><br />
 
-		<%= link_to "Go Green!", root_path(go_green: 1) %>
+		<!-- From Week 2 Homework, commenting out for final version -->
+		<%# link_to "Go Green!", root_path(go_green: 1) %> 
 	</div>
 
 </div>
