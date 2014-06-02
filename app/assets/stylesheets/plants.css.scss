@@ -17,8 +17,17 @@ $boxDark				: #369648;
 	background-color: cornsilk;
 }
 
-plant>a {
+h2 {
 	color: $boxDark;
+}
+
+
+a {
+	color: $boxDark;
+}
+
+a:hover {
+	color: black;
 }
 
 	/* Plant Forms */
