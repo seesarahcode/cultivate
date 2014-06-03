@@ -14,8 +14,14 @@ $boxDark				: #369648;
 	width: 70%;
 	margin: 0 auto;
 	padding: 30px;
-	background-color: cornsilk;
+	background-color: white;
+	border: 4px inset cornsilk;
 }
+
+h1 {
+	text-align: center;
+}
+
 
 h2 {
 	color: $boxDark;

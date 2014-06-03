@@ -131,6 +131,10 @@ select {
 	font-size: 1.05em;
 	text-shadow: none;
 }
+.dropdown-menu>li>a .coming-soon {
+	color: #585858;
+}
+
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { 
 	color: #000;
 	background-image: none;
@@ -174,7 +178,6 @@ select {
 	color: #000;
 	background-color: $bgHighlight;
 }
-
 
 /* typography */
 
