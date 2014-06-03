@@ -15,7 +15,8 @@ $boxDark				: #369648;
 	margin: 0 auto;
 	padding: 30px;
 	background-color: white;
-	border: 4px inset cornsilk;
+	border: 4px inset $bgDefault;
+	border-radius:15px;
 }
 
 h1 {

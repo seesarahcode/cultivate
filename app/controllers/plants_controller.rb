@@ -32,7 +32,7 @@ class PlantsController < ApplicationController
   # POST /plants.json
   def create
     @plant = @garden.plants.new(params[plant_params])
-
+    @plant.save
     respond_to do |format|
       if @plant.save
         format.html { redirect_to garden_plants_path(@garden), notice: 'Plant was successfully created.' }
