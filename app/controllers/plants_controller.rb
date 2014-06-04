@@ -2,7 +2,7 @@ class PlantsController < ApplicationController
   before_action :set_plant, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
 
-  before_action :find_garden
+  before_action :find_garden, only: [:create, :new, :show, :edit, :update, :destroy]
 
   layout 'plant'
 
@@ -32,7 +32,6 @@ class PlantsController < ApplicationController
   # POST /plants.json
   def create
     @plant = @garden.plants.new(params[plant_params])
-    @plant.save
     respond_to do |format|
       if @plant.save
         format.html { redirect_to garden_plants_path(@garden), notice: 'Plant was successfully created.' }
@@ -81,7 +80,7 @@ class PlantsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def plant_params
       params.require(:plant).permit(:type, :variety, :seed_source, 
-                                    :plant_date, :plant_quantity, :notes, :garden_id, :id)
+                                    :plant_date, :plant_quantity, :notes, :garden_id)
     end
 
     def find_garden

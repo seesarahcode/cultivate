@@ -1,4 +1,8 @@
 Cultivate::Application.routes.draw do
+  resources :trees
+
+  resources :orchards
+
   devise_for :views
   devise_for :users
 

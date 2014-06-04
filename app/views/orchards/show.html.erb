@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @orchard.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @orchard.description %>
+</p>
+
+<%= link_to 'Edit', edit_orchard_path(@orchard) %> |
+<%= link_to 'Back', orchards_path %>

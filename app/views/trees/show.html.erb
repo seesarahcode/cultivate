@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @tree.type %>
+</p>
+
+<p>
+  <strong>Variety:</strong>
+  <%= @tree.variety %>
+</p>
+
+<p>
+  <strong>Tree source:</strong>
+  <%= @tree.tree_source %>
+</p>
+
+<p>
+  <strong>Plant date:</strong>
+  <%= @tree.plant_date %>
+</p>
+
+<p>
+  <strong>Plant quantity:</strong>
+  <%= @tree.plant_quantity %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @tree.notes %>
+</p>
+
+<%= link_to 'Edit', edit_tree_path(@tree) %> |
+<%= link_to 'Back', trees_path %>

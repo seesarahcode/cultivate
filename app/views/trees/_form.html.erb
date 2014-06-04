@@ -1,0 +1,41 @@
+<%= form_for(@tree) do |f| %>
+  <% if @tree.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tree.errors.count, "error") %> prohibited this tree from being saved:</h2>
+
+      <ul>
+      <% @tree.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :variety %><br>
+    <%= f.text_field :variety %>
+  </div>
+  <div class="field">
+    <%= f.label :tree_source %><br>
+    <%= f.text_field :tree_source %>
+  </div>
+  <div class="field">
+    <%= f.label :plant_date %><br>
+    <%= f.date_select :plant_date %>
+  </div>
+  <div class="field">
+    <%= f.label :plant_quantity %><br>
+    <%= f.number_field :plant_quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

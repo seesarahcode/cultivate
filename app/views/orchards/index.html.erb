@@ -1,0 +1,29 @@
+<h1>Listing orchards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orchards.each do |orchard| %>
+      <tr>
+        <td><%= orchard.name %></td>
+        <td><%= orchard.description %></td>
+        <td><%= link_to 'Show', orchard %></td>
+        <td><%= link_to 'Edit', edit_orchard_path(orchard) %></td>
+        <td><%= link_to 'Destroy', orchard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Orchard', new_orchard_path %>
