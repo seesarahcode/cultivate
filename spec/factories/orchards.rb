@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :orchard do
-    name "MyString"
-    description "MyString"
+    name "Pear"
+    description "French Butter and Bartlett varieties."
   end
 end

@@ -3,12 +3,13 @@
 <div class="hero center jumbotron">
 
 	<div <%# greenify %>>
-		<h1>Welcome back to the land.</h1>
+		<h1><span class="landing-text">Welcome back to the land.</span></h1>
 	</div>
-
-	<p>Cultivate is a web app that helps people manage small farms and gardens. </p>
-	<p>We help keep your animals and agriculture organized, so you can spend more time celebrating the harvest.</p><br />
-
+	<div class="landing">
+		<br />
+		<p>Cultivate is a web app that helps people manage small farms and gardens. </p>
+		<p>We help keep your animals and agriculture organized, <br />so you can spend more time celebrating the harvest.</p><br />
+	</div>
 	<div class="center">
 		<%= link_to "Sign up", new_user_registration_path, class: "btn btn-lg btn-warning center", role: "button" %><br /><br />
 

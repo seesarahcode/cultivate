@@ -2,11 +2,12 @@
 
 FactoryGirl.define do
   factory :tree do
-    type ""
-    variety "MyString"
-    tree_source "MyString"
+    tree_type "Lime"
+    variety "Keffir"
+    tree_source "Farmer Bill's"
     plant_date "2014-06-02"
     plant_quantity 1
-    notes "MyText"
+    notes "Composted at planting."
+    orchard_id 1
   end
 end

@@ -1,3 +1,10 @@
+$bgDefault      : #4dd468;
+$bgHighlight    : #45BE5D;
+$colDefault     : #ffffff;
+$colHighlight   : #f9f68f;
+$boxDark        : #369648;
+$earthy         : #61380B;
+
 body {
   background-color: #fff;
   color: #333;
@@ -19,13 +26,12 @@ pre {
 }
 
 a {
-  color: #000;
+  color: $boxDark;
   &:visited {
-    color: #666;
+    color: $boxDark;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: $earthy;
   }
 }
 

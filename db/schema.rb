@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140603060108) do
+ActiveRecord::Schema.define(version: 20140605054753) do
 
   create_table "farms", force: true do |t|
     t.string   "name"
@@ -49,13 +49,13 @@ ActiveRecord::Schema.define(version: 20140603060108) do
     t.string   "type"
     t.string   "variety"
     t.string   "seed_source"
-    t.string   "plant_date"
+    t.date     "plant_date",     limit: 255
     t.integer  "plant_quantity"
     t.text     "notes"
   end
 
   create_table "trees", force: true do |t|
-    t.string   "type"
+    t.string   "tree_type"
     t.string   "variety"
     t.string   "tree_source"
     t.date     "plant_date"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 20140603060108) do
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "orchard_id"
   end
 
   create_table "users", force: true do |t|

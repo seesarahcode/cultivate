@@ -2,7 +2,7 @@ class PlantsController < ApplicationController
   before_action :set_plant, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
 
-  before_action :find_garden, only: [:create, :new, :show, :edit, :update, :destroy]
+  before_action :find_garden
 
   layout 'plant'
 

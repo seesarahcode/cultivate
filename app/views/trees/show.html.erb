@@ -2,7 +2,7 @@
 
 <p>
   <strong>Type:</strong>
-  <%= @tree.type %>
+  <%= @tree.tree_type %>
 </p>
 
 <p>
@@ -30,5 +30,5 @@
   <%= @tree.notes %>
 </p>
 
-<%= link_to 'Edit', edit_tree_path(@tree) %> |
-<%= link_to 'Back', trees_path %>
+<%= link_to 'Edit', edit_orchard_tree_path(@orchard, @tree) %> |
+<%= link_to 'Back', orchard_trees_path(@orchard) %>

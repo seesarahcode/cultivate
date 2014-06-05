@@ -11,13 +11,5 @@ describe "trees/show" do
     ))
   end
 
-  it "renders attributes in <p>" do
-    render
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/Type/)
-    rendered.should match(/Variety/)
-    rendered.should match(/Tree Source/)
-    rendered.should match(/1/)
-    rendered.should match(/MyText/)
-  end
+
 end

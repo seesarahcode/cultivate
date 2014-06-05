@@ -10,4 +10,11 @@ module HomeHelper
 	# 	end
 	# end
 
+
+	def random_background
+		backgrounds = ["/assets/bgVegetables.jpg", "/assets/bgTrees.jpg", "/assets/bgGarden.jpg" ]
+		backgrounds.sample
+	end
+
+
 end

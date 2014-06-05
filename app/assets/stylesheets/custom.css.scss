@@ -3,9 +3,10 @@ $bgHighlight    : #45BE5D;
 $colDefault     : #ffffff;
 $colHighlight   : #f9f68f;
 $boxDark				: #369648;
-
+$earthy					: #61380B;
 
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Cabin:400,500,600,700);
 @import url(http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700);
 @import url(http://fonts.googleapis.com/css?family=Josefin+Slab:700);
 
@@ -193,13 +194,14 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
-h1 {
-  font-family: 'Josefin Slab', Georgia, serif;
-	font-weight: 700;
+h1>.general {
+  font-family: 'Cabin Sketch', Georgia, serif;
+	font-weight: 400;
   line-height: 55px;
-  font-size: 2em;
+  font-size: 1em;
   letter-spacing: -2px;
   margin-bottom: 30px;
+  color: $earthy;
 }
 
 h2 {
@@ -241,8 +243,14 @@ p {
 /* FOOTER */
 
 .footer {
-	padding-top:30px;
-	padding-bottom:10px;
+	margin-top:30px;
+	padding:5px;
+	width:100%;
+	position:absolute;
+	height:15px;
+	bottom:0;
+	left:0;
+	background-color:rgba(255,255,255,0.75);
 }
 .footer>nav>ul>li {
 	font-size: 0.75em;
@@ -266,3 +274,9 @@ p {
 	color: white;
 }
 
+.btn.btn-lg.btn-warning.center {
+	color: #fff;
+}
+.btn.btn-lg.btn-warning.center:hover {
+	color: $earthy;
+}

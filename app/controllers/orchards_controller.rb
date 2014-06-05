@@ -1,5 +1,6 @@
 class OrchardsController < ApplicationController
   before_action :set_orchard, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   layout 'orchard'
 

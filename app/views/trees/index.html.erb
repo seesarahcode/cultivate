@@ -1,4 +1,4 @@
-<h1>Listing trees</h1>
+<h1>My Trees</h1>
 
 <table>
   <thead>
@@ -18,15 +18,15 @@
   <tbody>
     <% @trees.each do |tree| %>
       <tr>
-        <td><%= tree.type %></td>
+        <td><%= tree.tree_type %></td>
         <td><%= tree.variety %></td>
         <td><%= tree.tree_source %></td>
         <td><%= tree.plant_date %></td>
         <td><%= tree.plant_quantity %></td>
         <td><%= tree.notes %></td>
-        <td><%= link_to 'Show', tree %></td>
-        <td><%= link_to 'Edit', edit_tree_path(tree) %></td>
-        <td><%= link_to 'Destroy', tree, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', orchard_tree_path(@orchard, tree) %></td>
+        <td><%= link_to 'Edit', edit_orchard_tree_path(@orchard, tree) %></td>
+        <td><%= link_to 'Destroy', [@orchard, tree], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,5 @@
 
 <br>
 
-<%= link_to 'New Tree', new_tree_path %>
+<%= link_to 'New Tree', { :action => 'new', :orchard_id => @orchard.id } %>
+<%= link_to 'Back', orchard_path(@orchard) %>

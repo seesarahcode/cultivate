@@ -48,7 +48,7 @@ class GardensController < ApplicationController
   def update
     respond_to do |format|
       if @garden.update(garden_params)
-        format.html { redirect_to @garden, notice: 'garden was successfully updated.' }
+        format.html { redirect_to @garden, notice: 'Garden was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

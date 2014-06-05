@@ -2,9 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-	width: 80%;
-}
+@import url(http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:700);
+
+$bgDefault      : #4dd468;
+$bgHighlight    : #45BE5D;
+$colDefault     : #ffffff;
+$colHighlight   : #f9f68f;
+$boxDark				: #369648;
+
 
 .greenify {
 	color: #669900;
@@ -12,4 +18,34 @@ body {
 
 .default {
 	color: #000;
+}
+
+.hero {
+	margin: 0 auto;
+	margin-top:100px;
+	padding: 30px;
+	background-color:rgba(255,255,255,0.8);
+	width:80%;
+	border: 4px inset $bgHighlight;
+	border-radius:15px;
+}
+
+.landing-text {
+	font-family: "Cabin Sketch", Georgia, serif;
+	font-weight: 700;
+	font-size: 1.3em;
+	color: goldenrod;
+	text-shadow: 1px 2px #61380B;
+}
+
+.landing {
+	margin-top: 40px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.landing>p {
+	font-family: "Cabin", serif;
+	font-size: 1.4em;
+		line-height: 125%;
 }
