@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605054753) do
+ActiveRecord::Schema.define(version: 20140605233807) do
+
+  create_table "chickens", force: true do |t|
+    t.string   "category"
+    t.string   "name"
+    t.date     "birthdate"
+    t.string   "breed"
+    t.string   "sex"
+    t.text     "description"
+    t.string   "age"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ducks", force: true do |t|
+    t.string   "category"
+    t.string   "name"
+    t.date     "birthdate"
+    t.string   "breed"
+    t.string   "sex"
+    t.text     "description"
+    t.string   "age"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "farms", force: true do |t|
     t.string   "name"
@@ -30,6 +54,18 @@ ActiveRecord::Schema.define(version: 20140605054753) do
     t.datetime "updated_at"
   end
 
+  create_table "goats", force: true do |t|
+    t.string   "category"
+    t.string   "name"
+    t.date     "birthdate"
+    t.string   "breed"
+    t.string   "sex"
+    t.text     "description"
+    t.string   "age"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "orchards", force: true do |t|
     t.string   "name"
     t.string   "description"
@@ -42,16 +78,41 @@ ActiveRecord::Schema.define(version: 20140605054753) do
     t.datetime "updated_at"
   end
 
+  create_table "pigs", force: true do |t|
+    t.string   "category"
+    t.string   "name"
+    t.date     "birthdate"
+    t.string   "breed"
+    t.string   "sex"
+    t.text     "description"
+    t.string   "age"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "plants", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "garden_id"
-    t.string   "type"
+    t.string   "plant_type"
     t.string   "variety"
     t.string   "seed_source"
-    t.date     "plant_date",     limit: 255
     t.integer  "plant_quantity"
     t.text     "notes"
+    t.date     "plant_date"
+  end
+
+  create_table "sheep", force: true do |t|
+    t.string   "category"
+    t.string   "name"
+    t.date     "birthdate"
+    t.string   "breed"
+    t.string   "sex"
+    t.text     "description"
+    t.string   "age"
+    t.date     "last_sheer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "trees", force: true do |t|

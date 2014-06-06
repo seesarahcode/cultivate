@@ -1,6 +1,8 @@
-<h1>Editing plant</h1>
+<h1><span class="general">Edit Plant</span></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', garden_plant_path(@garden, @plant) %> |
-<%= link_to 'Back', garden_plants_path(@garden) %>
+<div class="text-center">
+	<%= link_to 'Show', garden_plant_path(@garden, @plant) %> |
+	<%= link_to 'Back', garden_plants_path(@garden) %>
+</div>

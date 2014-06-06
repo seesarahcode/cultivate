@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @sheep.category %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sheep.name %>
+</p>
+
+<p>
+  <strong>Birthdate:</strong>
+  <%= @sheep.birthdate %>
+</p>
+
+<p>
+  <strong>Breed:</strong>
+  <%= @sheep.breed %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @sheep.sex %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @sheep.description %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @sheep.age %>
+</p>
+
+<p>
+  <strong>Last sheer:</strong>
+  <%= @sheep.last_sheer %>
+</p>
+<div class="text-center">
+  <%= link_to 'Edit', edit_sheep_path(@sheep) %> |
+  <%= link_to 'Back', sheep_index_path %>
+</div>

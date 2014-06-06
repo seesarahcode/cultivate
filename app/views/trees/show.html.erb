@@ -30,5 +30,7 @@
   <%= @tree.notes %>
 </p>
 
-<%= link_to 'Edit', edit_orchard_tree_path(@orchard, @tree) %> |
-<%= link_to 'Back', orchard_trees_path(@orchard) %>
+<div class="text-center">
+  <%= link_to 'Edit', edit_orchard_tree_path(@orchard, @tree) %> |
+  <%= link_to 'Back', orchard_trees_path(@orchard) %>
+</div>

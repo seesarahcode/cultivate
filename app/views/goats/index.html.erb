@@ -1,0 +1,45 @@
+<h1><span class="general">My Goats</span></h1>
+
+<div class="text-center fun-fact">
+  <p>You have <%= pluralize(@goats.size, "goat") %> in your herd.</p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Name</th>
+      <th>Birthdate</th>
+      <th>Breed</th>
+      <th>Sex</th>
+      <th>Description</th>
+      <th>Age</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @goats.each do |goat| %>
+      <tr>
+        <td><%= goat.category %></td>
+        <td><%= goat.name %></td>
+        <td><%= goat.birthdate %></td>
+        <td><%= goat.breed %></td>
+        <td><%= goat.sex %></td>
+        <td><%= goat.description %></td>
+        <td><%= goat.age %></td>
+        <td><%= link_to 'Show', goat %> <br />
+            <%= link_to 'Edit', edit_goat_path(goat) %> <br />
+            <%= link_to 'Destroy', goat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div class="text-center">
+  <%= link_to 'New Goat', new_goat_path %>
+</div>

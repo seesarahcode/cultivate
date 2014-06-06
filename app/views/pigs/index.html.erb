@@ -1,0 +1,45 @@
+<h1><span class="general">My Pigs</span></h1>
+
+<div class="text-center fun-fact">
+  <p>You have <%= pluralize(@pigs.size, "pig") %> in your pen.</p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Name</th>
+      <th>Birthdate</th>
+      <th>Breed</th>
+      <th>Sex</th>
+      <th>Description</th>
+      <th>Age</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pigs.each do |pig| %>
+      <tr>
+        <td><%= pig.category %></td>
+        <td><%= pig.name %></td>
+        <td><%= pig.birthdate %></td>
+        <td><%= pig.breed %></td>
+        <td><%= pig.sex %></td>
+        <td><%= pig.description %></td>
+        <td><%= pig.age %></td>
+        <td><%= link_to 'Show', pig %><br />
+            <%= link_to 'Edit', edit_pig_path(pig) %><br />
+            <%= link_to 'Destroy', pig, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div class="text-center">
+  <%= link_to 'New Pig', new_pig_path %>
+</div>

@@ -24,6 +24,11 @@ section {
   overflow: auto;
 }
 
+table {
+	margin: 0 auto;
+	position: center;
+}
+
 textarea {
   resize: vertical;
 }
@@ -45,9 +50,9 @@ textarea {
 	font-weight: 700;
 }
 
+
 th {
-	padding: 20px;
-}
+	padding-right:30px;}
 
 td {
 	padding-right:30px;

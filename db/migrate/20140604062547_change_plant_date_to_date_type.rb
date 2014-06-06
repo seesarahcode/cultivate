@@ -1,7 +1,5 @@
-class ChangePlantDateToDateType < ActiveRecord::Migration
-  def change
-  	change_table(:plants) do |t|
-      t.change :plant_date, :date
-    end
+class DropPlantDate < ActiveRecord::Migration
+  change_table :plants do |p|
+  	p.remove :plant_date
   end
 end

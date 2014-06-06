@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<%= render 'layouts/header' %>
-		<div class="plants-wrapper">
+		<div class="gardens-wrapper">
 		<% if notice %>
 		  <p class="alert alert-success"><%= notice %></p>
 		<% end %>
@@ -22,6 +22,5 @@
 		<% end %>
 			<%= yield %>
 		</div>
-		<%= render 'layouts/footer' %>
 	</body>
 </html>

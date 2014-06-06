@@ -4,6 +4,8 @@ class TreesController < ApplicationController
 
   before_action :find_orchard
 
+  layout 'orchard'
+
   # GET /trees
   # GET /trees.json
   def index

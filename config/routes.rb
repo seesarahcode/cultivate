@@ -12,8 +12,18 @@ Cultivate::Application.routes.draw do
   end
  
   resources :users
+  resources :sheep
+  resources :pigs
+  resources :goats
+  resources :ducks
+  resources :chickens
 
   match '/gardens', to: 'gardens#index', via: 'get'
+  match '/chickens', to: 'chickens#index', via: 'get'
+  match '/ducks', to: 'ducks#index', via: 'get'
+  match '/pigs', to: 'pigs#index', via: 'get'
+  match '/goats', to: 'goats#index', via: 'get'
+  match '/sheep', to: 'sheep#index', via: 'get'
   match '/plants', to: 'gardens#index', via: 'get'
   match '/trees', to: 'orchards#index', via: 'get'
   match '/contact', to: 'home#contact', via: 'get'

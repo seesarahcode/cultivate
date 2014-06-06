@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @goat.category %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @goat.name %>
+</p>
+
+<p>
+  <strong>Birthdate:</strong>
+  <%= @goat.birthdate %>
+</p>
+
+<p>
+  <strong>Breed:</strong>
+  <%= @goat.breed %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @goat.sex %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @goat.description %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @goat.age %>
+</p>
+
+<div class="text-center">
+  <%= link_to 'Edit', edit_goat_path(@goat) %> |
+  <%= link_to 'Back', goats_path %>
+</div>

@@ -15,5 +15,8 @@
   <%= @garden.description %>
 </p>
 
-<%= link_to 'Edit', edit_garden_path(@garden) %> |
-<%= link_to 'Back', gardens_path %>
+<div class="text-center">
+	<%= link_to 'Edit', edit_garden_path(@garden) %> |
+	<%= link_to 'View plants', garden_plants_path(@garden) %>  |
+	<%= link_to 'Back', gardens_path %>
+</div>

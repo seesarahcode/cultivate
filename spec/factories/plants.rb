@@ -1,6 +1,6 @@
 FactoryGirl.define do	
 	factory :plant do |p|
-		p.type							"Tomato"
+		p.plant_type							"Tomato"
 		p.variety						"Brandywine"
 		p.seed_source				"Baker Creek Seeds"
 		p.plant_date				"May 2, 2014"

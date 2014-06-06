@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @chicken.category %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @chicken.name %>
+</p>
+
+<p>
+  <strong>Birthdate:</strong>
+  <%= @chicken.birthdate %>
+</p>
+<p>
+  <strong>Age:</strong>
+  <%= @chicken.age %>
+</p>
+<p>
+  <strong>Breed:</strong>
+  <%= @chicken.breed %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @chicken.sex %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @chicken.description %>
+</p>
+
+
+<div class="text-center">
+  <%= link_to 'Edit', edit_chicken_path(@chicken) %> |
+  <%= link_to 'Back', chickens_path %>
+</div>

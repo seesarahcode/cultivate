@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @pig.category %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pig.name %>
+</p>
+
+<p>
+  <strong>Birthdate:</strong>
+  <%= @pig.birthdate %>
+</p>
+
+<p>
+  <strong>Breed:</strong>
+  <%= @pig.breed %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @pig.sex %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pig.description %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @pig.age %>
+</p>
+
+<div class="text-center">
+  <%= link_to 'Edit', edit_pig_path(@pig) %> |
+  <%= link_to 'Back', pigs_path %>
+</div>

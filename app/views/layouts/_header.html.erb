@@ -1,7 +1,7 @@
 <header class="navbar navbar-fixed-top navbar-default">
 	<div class="navbar-inner">
 		<div class="container">
-			<%= link_to "Cultivate", root_path, id: "logo" %>
+			<%= link_to "Cultivate", "/", id: "logo" %>
 			<nav>
 				<ul class="nav pull-right">
 					<li>
@@ -29,9 +29,11 @@
 		   				
 		   				<ul class="dropdown-menu">
 				        
-				        <li><a href="#" alt="Coming soon"><span class="coming-soon">My Chickens</span></a></li>
-				        <li><a href="#" alt="Coming soon"><span class="coming-soon">My Goats</span></a></li>
-				        <li><a href="#" alt="Coming soon"><span class="coming-soon">My Sheep</span></a></li>
+				        <li><%= link_to "My Chickens", chickens_path %></li>
+				        <li><%= link_to "My Ducks", ducks_path %></li>
+				        <li><%= link_to "My Pigs", pigs_path %></li>
+				        <li><%= link_to "My Goats", goats_path %></li>
+				        <li><%= link_to "My Sheep", sheep_index_path %></li>
 				        <li class="divider"></li>
 						    <li><%= link_to "Browse Barnyards", "#" %></li>
 						  

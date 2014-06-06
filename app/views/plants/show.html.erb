@@ -2,7 +2,7 @@
 
 <p>
   <strong>Type:</strong>
-  <%= @plant.type %>
+  <%= @plant.plant_type %>
 </p>
 
 <p>
@@ -30,5 +30,7 @@
   <%= @plant.notes %>
 </p>
 
-<%= link_to 'Edit', edit_garden_plant_path(@garden, @plant) %> |
-<%= link_to 'Back', garden_plants_path(@garden) %>
+<div class="text-center">
+  <%= link_to 'Edit', edit_garden_plant_path(@garden, @plant) %> |
+  <%= link_to 'Back', garden_plants_path(@garden) %>
+</div>

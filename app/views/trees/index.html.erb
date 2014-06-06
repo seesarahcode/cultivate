@@ -1,4 +1,4 @@
-<h1>My Trees</h1>
+<h1><span class="general">My Trees</span></h1>
 
 <table>
   <thead>
@@ -34,5 +34,7 @@
 
 <br>
 
-<%= link_to 'New Tree', { :action => 'new', :orchard_id => @orchard.id } %>
-<%= link_to 'Back', orchard_path(@orchard) %>
+<div class="text-center">
+  <%= link_to 'New Tree', { :action => 'new', :orchard_id => @orchard.id } %>
+  <%= link_to 'Back', orchard_path(@orchard) %>
+</div>

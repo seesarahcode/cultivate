@@ -1,0 +1,47 @@
+<h1><span class="general">My Sheep</span></h1>
+
+<div class="text-center fun-fact">
+  <p>You have <%= pluralize(@sheep.size, "sheep") %> in your herd.</p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Name</th>
+      <th>Birthdate</th>
+      <th>Breed</th>
+      <th>Sex</th>
+      <th>Description</th>
+      <th>Age</th>
+      <th>Last sheer</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sheep.each do |sheep| %>
+      <tr>
+        <td><%= sheep.category %></td>
+        <td><%= sheep.name %></td>
+        <td><%= sheep.birthdate %></td>
+        <td><%= sheep.breed %></td>
+        <td><%= sheep.sex %></td>
+        <td><%= sheep.description %></td>
+        <td><%= sheep.age %></td>
+        <td><%= sheep.last_sheer %></td>
+        <td><%= link_to 'Show', sheep %><br />
+            <%= link_to 'Edit', edit_sheep_path(sheep) %><br />
+            <%= link_to 'Destroy', sheep, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div class="text-center">
+  <%= link_to 'New Sheep', new_sheep_path %>
+</div>

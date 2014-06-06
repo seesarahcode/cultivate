@@ -1,0 +1,45 @@
+<h1><span class="general">My Ducks</span></h1>
+
+<div class="text-center fun-fact">
+  <p>You have <%= pluralize(@ducks.size, "duck") %> in your flock.</p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Name</th>
+      <th>Birthdate</th>
+      <th>Breed</th>
+      <th>Sex</th>
+      <th>Description</th>
+      <th>Age</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ducks.each do |duck| %>
+      <tr>
+        <td><%= duck.category %></td>
+        <td><%= duck.name %></td>
+        <td><%= duck.birthdate %></td>
+        <td><%= duck.breed %></td>
+        <td><%= duck.sex %></td>
+        <td><%= duck.description %></td>
+        <td><%= duck.age %></td>
+        <td><%= link_to 'Show', duck %><br />
+            <%= link_to 'Edit', edit_duck_path(duck) %><br />
+            <%= link_to 'Destroy', duck, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div class="text-center">
+  <%= link_to 'New Duck', new_duck_path %>
+</div>
