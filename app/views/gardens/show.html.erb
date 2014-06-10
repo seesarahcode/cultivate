@@ -11,12 +11,51 @@
 </p>
 
 <p>
+  <strong>Name:</strong>
+  <%= @garden.name %>
+</p>
+
+<p>
   <strong>Description:</strong>
   <%= @garden.description %>
 </p>
+<br />
+<h3>Plants</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Family</th>
+      <th>Variety</th>
+      <th>Seed source</th>
+      <th>Quantity</th>
+      <th>Notes</th>
+      <th>Plant date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @garden.plants.each do |plant| %>
+      <tr>
+        <td><%= plant.family %></td>
+        <td><%= plant.variety %></td>
+        <td><%= plant.seed_source %></td>
+        <td><%= plant.quantity %></td>
+        <td><%= plant.notes %></td>
+        <td><%= plant.plant_date %></td>
+        <td><%= link_to 'Show', garden_plant_path(@garden, plant) %></td>
+        <td><%= link_to 'Edit', edit_garden_plant_path(@garden, plant) %></td>
+        <td><%= link_to 'Destroy', [@garden, plant], method: :delete, data: { confirm: 'Are you sure you want to delete this plant?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <div class="text-center">
-	<%= link_to 'Edit', edit_garden_path(@garden) %> |
-	<%= link_to 'View plants', garden_plants_path(@garden) %>  |
-	<%= link_to 'Back', gardens_path %>
+  <%= link_to 'Edit Garden', edit_garden_path(@garden) %> |
+  <%= link_to 'Delete Garden', @garden, confirm: "Are you sure you want to delete this garden?", method: :delete %> |
+  <%= link_to 'Back to Gardens', gardens_path %>
 </div>

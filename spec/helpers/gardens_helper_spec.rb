@@ -10,3 +10,6 @@ require 'spec_helper'
 #     end
 #   end
 # end
+describe GardensHelper do
+  pending "add some examples to (or delete) #{__FILE__}"
+end

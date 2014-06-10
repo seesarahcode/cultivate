@@ -1,15 +1,15 @@
 Cultivate::Application.routes.draw do
 
-  devise_for :views
-  devise_for :users
+
 
   resources :gardens do
-    resources :plants
+      resources :plants
   end
 
-  resources :orchards do
-    resources :trees
-  end
+  devise_for :views
+  devise_for :users
+  resources :orchards
+  resources :trees
  
   resources :users
   resources :sheep
@@ -19,6 +19,7 @@ Cultivate::Application.routes.draw do
   resources :chickens
 
   match '/gardens', to: 'gardens#index', via: 'get'
+  match '/plants', to: 'plants#index', via: 'get'
   match '/chickens', to: 'chickens#index', via: 'get'
   match '/ducks', to: 'ducks#index', via: 'get'
   match '/pigs', to: 'pigs#index', via: 'get'

@@ -1,9 +1,4 @@
 class Garden < ActiveRecord::Base
-	has_many :plants
-	
-	scope :small_garden, -> { where 'number_of_plants < 10' }
-	scope :window_garden, -> { where('number_of_plants < 5') }
-
-	validates :season, :year, :presence => true
-
+	has_many :plants, -> { order("plant_date DESC, family ASC") }, 
+					 :dependent => :nullify
 end

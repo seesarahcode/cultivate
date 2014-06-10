@@ -1,40 +1,36 @@
 class PlantsController < ApplicationController
   before_action :set_plant, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!
-
-  before_action :find_garden
-
-  layout 'plant'
-
+  before_action :set_garden
   # GET /plants
   # GET /plants.json
+  layout 'plant'
+
   def index
-    @plants = @garden.plants.all
+    @plants = Plant.all
   end
 
   # GET /plants/1
   # GET /plants/1.json
   def show
-    @plant = @garden.plants.find(params[:id])
   end
 
   # GET /plants/new
   def new
-    @plant = @garden.plants.new
+    @plant = Plant.new
   end
 
   # GET /plants/1/edit
   def edit
-    @plant = @garden.plants.find(params[:id])
   end
 
   # POST /plants
   # POST /plants.json
   def create
-    @plant = @garden.plants.new(params[plant_params])
+    @plant = @garden.plants.new(plant_params)
+
     respond_to do |format|
       if @plant.save
-        format.html { redirect_to garden_plants_path(@garden), notice: 'Plant was successfully created.' }
+        format.html { redirect_to garden_plant_path(@garden, @plant), notice: 'Plant was successfully created.' }
         format.json { render action: 'show', status: :created, location: @plant }
       else
         format.html { render action: 'new' }
@@ -46,14 +42,11 @@ class PlantsController < ApplicationController
   # PATCH/PUT /plants/1
   # PATCH/PUT /plants/1.json
   def update
-    @plant = @garden.plants.find(params[:id])
     respond_to do |format|
       if @plant.update(plant_params)
-        format.html { redirect_to [@garden, @plant], notice: 'Plant was successfully updated.' }
+        format.html { redirect_to garden_plant_path(@garden, @plant), notice: 'Plant was successfully updated.' }
         format.json { head :no_content }
       else
-        @gardens = Garden.order('position ASC')
-        @plant_count = Plant.count
         format.html { render action: 'edit' }
         format.json { render json: @plant.errors, status: :unprocessable_entity }
       end
@@ -66,25 +59,24 @@ class PlantsController < ApplicationController
     @plant = @garden.plants.find(params[:id])
     @plant.destroy
     respond_to do |format|
-      format.html { redirect_to garden_plants_path(@garden) }
+      format.html { redirect_to @garden, notice: 'Plant deleted.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    
+    def set_garden
+      @garden = Garden.find(params[:garden_id])
+    end
+
     def set_plant
       @plant = Plant.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def plant_params
-      params.require(:plant).permit(:plant_type, :variety, :seed_source, 
-                                    :plant_date, :plant_quantity, :notes, :garden_id)
+      params.require(:plant).permit(:garden_id, :family, :variety, :seed_source, :quantity, :notes, :plant_date)
     end
-
-    def find_garden
-      @garden = Garden.find(params[:garden_id])
-    end
-
 end

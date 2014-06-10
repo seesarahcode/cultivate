@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @plant.plant_type %>
+  <strong>Family:</strong>
+  <%= @plant.family %>
 </p>
 
 <p>
@@ -16,13 +16,8 @@
 </p>
 
 <p>
-  <strong>Date Planted:</strong>
-  <%= @plant.plant_date %>
-</p>
-
-<p>
   <strong>Quantity:</strong>
-  <%= @plant.plant_quantity %>
+  <%= @plant.quantity %>
 </p>
 
 <p>
@@ -30,7 +25,13 @@
   <%= @plant.notes %>
 </p>
 
+<p>
+  <strong>Plant date:</strong>
+  <%= @plant.plant_date %>
+</p>
+
 <div class="text-center">
-  <%= link_to 'Edit', edit_garden_plant_path(@garden, @plant) %> |
-  <%= link_to 'Back', garden_plants_path(@garden) %>
+<%= link_to 'Edit', edit_garden_plant_path(@garden, @plant) %> |
+<%= link_to 'Delete', [@garden, @plant], confirm: "Are you sure you want to delete this plant?", :method => :delete %> |
+<%= link_to 'Back', garden_plants_path %>
 </div>

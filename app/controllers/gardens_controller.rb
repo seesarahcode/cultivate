@@ -1,11 +1,11 @@
 class GardensController < ApplicationController
+  before_action :set_garden, only: [:show, :edit, :update, :destroy]
 
-   before_action :set_garden, only: [:show, :edit, :update, :destroy]
-   before_filter :authenticate_user!
+  layout 'garden'
 
-   layout 'garden'
-
-	def index
+  # GET /gardens
+  # GET /gardens.json
+  def index
     @gardens = Garden.all
   end
 
@@ -21,10 +21,6 @@ class GardensController < ApplicationController
 
   # GET /gardens/1/edit
   def edit
-  end
-
-  def name
-    "#{@garden.season} #{@garden.year}"
   end
 
   # POST /gardens
@@ -75,7 +71,6 @@ class GardensController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def garden_params
-      params.require(:garden).permit(:season, :year, :description)
-    end  
-
+      params.require(:garden).permit(:season, :year, :name, :description)
+    end
 end
