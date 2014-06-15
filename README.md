@@ -7,8 +7,6 @@ A web app that helps small, hobby-sized farms manage their animals and agricultu
 
 ## Upcoming Features
 
-*		Garden tracking--planting and harvesting schedules, predicted harvest quantities, severe weather warnings (via a weather API), composting and soil tools
-
-*		Animal management--stats for farm animals, feed calculators, breeding and health trackers, milking stats 
-
-*		Farm project tracking--a general project tool for managing tasks like installing/repairing fences, building shelters, digging ponds, etc.
+*		Garden tracking: planting and harvesting schedules, predicted harvest quantities, severe weather warnings, composting and soil tools.
+*		Animal management: stats for farm animals, feed calculators, breeding and health trackers, milking and sheering stats 
+*		Farm project tracking: a general project tool for managing tasks like installing/repairing fences, building shelters, digging ponds, etc.
