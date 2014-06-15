@@ -1,36 +1,45 @@
 <h1><span class="general">My Gardens</span></h1>
+<br />
+<br />
+<!-- GARDEN DISPLAY -->
 
-<table>
-  <thead>
-    <tr>
-      <th>Season</th>
-      <th>Year</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <% @gardens.in_groups_of(3) do |group| %>
+    <div class="row-fluid">
+        <% group.compact.each do |garden| %>
+        <div class="garden-box span4">  
+          <h4><%= garden.name %></h4>  
 
-  <tbody>
-    <% @gardens.each do |garden| %>
-      <tr>
-        <td><%= garden.season %></td>
-        <td><%= garden.year %></td>
-        <td><%= garden.name %></td>
-        <td><%= garden.description %></td>
-        <td><%= link_to 'View Plants', garden_plants_path(garden)%></td>
-        <td><%= link_to 'Plant a Seed', new_garden_plant_path(garden)%></td>
-        <td><%= link_to 'Show', garden %><br />
-            <%= link_to 'Edit', edit_garden_path(garden) %><br />
-            <%= link_to 'Destroy', garden, method: :delete, data: { confirm: 'Are you sure you want to destroy this garden?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<!-- GARDEN IMAGE -->
+          <% if garden.default_img.exists? %>
+            <%= image_tag garden.default_img.url(:thumb), :class => "img-polaroid" %>
+          <% else %>
+            <%= link_to 'Add a Photo', edit_garden_path(garden) %>
+          <% end %> <br />
+          <br />
+
+        <!-- GARDEN NAV ICONS-->
+          <%= link_to garden do %>
+              <i class="icon-eye-open"></i>
+          <% end %>
+
+          <%= link_to edit_garden_path(garden) do %>
+              <i class="icon-pencil"></i>
+          <% end %>
+
+          <%= link_to garden, method: :delete, data: { confirm: 'Are you sure you want to destroy this garden?' } do %>
+              <i class="icon-trash"></i>
+          <% end %>
+          <br /><br />  
+
+         <strong> <%= garden.season %> <%= garden.year %></strong><br />
+          <%= garden.description %> <br />
+          <br />
+         <%= link_to 'View Plants', garden_plants_path(garden)%> | 
+         <%= link_to 'Plant a Seed', new_garden_plant_path(garden)%><br />
+       </div>
+       <% end %>
+    </div>
+  <% end %>
 
 <br>
 <div class="text-center">

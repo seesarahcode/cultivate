@@ -7,6 +7,8 @@ $bgHighlight    : #45BE5D;
 $colDefault     : #ffffff;
 $colHighlight   : #f9f68f;
 $boxDark				: #369648;
+$gardenBox      : #94e5a4;
+$earthy					: #61380B;
 
 @import url(http://fonts.googleapis.com/css?family=Cabin:400,500,600,700);
 @import url(http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700);
@@ -18,14 +20,20 @@ $boxDark				: #369648;
 	margin: 0 auto;
 	padding: 30px;
 	background-color: white;
-	border: 4px inset $bgHighlight;
-	border-radius: 15px;
 }
+
 h1 {
 	text-align: center;
 }
+
 h2 {
 	color: $boxDark;
+}
+
+h4 {
+	font-family: 'Josefin Slab', Georgia, serif;
+	color: $earthy;
+	font-size:1.75em;
 }
 
 .gardens-wrapper>a {
@@ -34,6 +42,18 @@ h2 {
 
 .gardens-wrapper>a:hover {
 	color: black;
+}
+
+.garden-box {
+	background-color: white;
+	padding:10px;
+	text-align: center;
+	border: 3px solid $gardenBox;
+	border-radius: 25px;
+}
+
+.garden-box:hover {
+	background-color: $gardenBox;
 }
 
 

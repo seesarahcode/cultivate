@@ -37,5 +37,6 @@ Cultivate::Application.configure do
     :authentication => :cram_md5,
     :enable_starttls_auto => true
   }
-
+  # For Paperclip
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 end

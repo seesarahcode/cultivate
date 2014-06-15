@@ -19,7 +19,11 @@ group :production do
 	gem 'rails_12factor', '0.0.2'
 end
 
+# Features
 gem 'devise'
+gem 'paperclip', "~> 4.1"
+
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 # Use Uglifier as compressor for JavaScript assets

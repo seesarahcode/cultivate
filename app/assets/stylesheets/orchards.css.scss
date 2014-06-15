@@ -18,8 +18,9 @@ $boxDark				: #369648;
 	margin: 0 auto;
 	padding: 30px;
 	background-color: white;
-	border: 4px inset $bgHighlight;
-	border-radius: 15px;
+	border-left: 4px inset $bgHighlight;
+	border-right: 4px inset $bgHighlight;
+	border-radius: 25px;
 }
 h1 {
 	text-align: center;
