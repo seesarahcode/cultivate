@@ -21,4 +21,4 @@ A web app that helps small, hobby-sized farms manage their animals and agricultu
 *		Project To-dos: manage maintenance tasks like installing or repairing fences, building shelters, digging ponds, and more
 
 
-Ideas, questions, or looking to contribute? Tweet me at: [http://twitter.com/seesarahcode](@seesarahcode "Cultivate")
+Ideas, questions, or looking to contribute? Tweet me at: [@seesarahcode](http://twitter.com/seesarahcode "Cultivate")
