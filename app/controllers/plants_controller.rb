@@ -1,6 +1,6 @@
 class PlantsController < ApplicationController
   before_action :set_plant, only: [:show, :edit, :update, :destroy]
-  before_action :set_garden
+  before_action :set_garden, only: [:show, :edit, :new, :update, :create, :destroy]
   # GET /plants
   # GET /plants.json
   layout 'plant'

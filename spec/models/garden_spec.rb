@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Garden do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "#new" do
+		it "has a valid factory" do
+			FactoryGirl.create(:garden).should be_valid
+		end
+	end
 end
