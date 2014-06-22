@@ -1,6 +1,8 @@
 Cultivate
 =========
 
+[![Build Status](https://travis-ci.org/sarahwheeler/cultivate.svg?branch=master)](https://travis-ci.org/sarahwheeler/cultivate)
+
 In beta at: [http://cultivate.heroku.com/](http://cultivate.heroku.com/ "Cultivate")
 
 A web app that helps small, hobby-sized farms manage their animals and agriculture.
