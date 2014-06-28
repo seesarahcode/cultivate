@@ -1,7 +1,7 @@
 Cultivate
 =========
 
-![Cultivate screenshot](https://github.com/sarahwheeler/cultivate/blob/master/app/assets/images/Cultivate_screens.png "Cultivate: landing page (top) and Gardens page (bottom)")
+![Cultivate screenshot](https://raw.githubusercontent.com/sarahwheeler/cultivate/master/app/assets/images/Cultivate_screens.png "Cultivate: landing page (top) and Gardens page (bottom)")
 
 
 [![Build Status](https://travis-ci.org/sarahwheeler/cultivate.svg?branch=master)](https://travis-ci.org/sarahwheeler/cultivate)
