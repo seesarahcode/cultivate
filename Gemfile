@@ -21,8 +21,10 @@ end
 
 # Features
 gem 'devise'
+# For Gardens
 gem 'paperclip', "~> 4.1"
-
+# For Plants
+gem 'carrierwave'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140614070203) do
+ActiveRecord::Schema.define(version: 20140630062642) do
 
   create_table "chickens", force: true do |t|
     t.string   "category"
@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 20140614070203) do
     t.date     "plant_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "plant_image"
   end
 
   create_table "sheep", force: true do |t|
